@@ -19,11 +19,14 @@
 html,
 body {
   background-color: #022536;
-  font-family: Arvo-Italic;
 }
 
 .logo-m {
   font-family: Arvo-Bold-Italic;  
+}
+
+.logo-m {
+  font-family: Arvo-Italic;  
 }
 
 .FlexContainer {
