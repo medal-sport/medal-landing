@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Arvo-Italic;
+  src: url('../fonts/Arvo/Arvo-Italic.ttf'); 
+}
+
+@font-face {
+  font-family: Arvo-Bold-Italic;
+  src: url('../fonts/Arvo/Arvo-BoldItalic.ttf'); 
+}
+
+*, *:before, *:after {
+	margin: 0px; 
+	padding: 0px; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #022536;
+  font-family: Arvo-Italic;
+}
+
+.logo-m {
+  font-family: Arvo-Bold-Italic;  
+}
+
+.FlexContainer {
+	position: fixed;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  flex-direction: row;
+	font-size: 7rem;
+}
+
+.FlexContainer div {
+	color: #fff;
+}
+
+@media only screen and (max-width: 414px) {
+.FlexContainer {
+  font-size: 4rem;
+}
