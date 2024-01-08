@@ -1,13 +1,3 @@
-@font-face {
-  font-family: Arvo-Italic;
-  src: url('../fonts/Arvo/Arvo-Italic.ttf'); 
-}
-
-@font-face {
-  font-family: Arvo-Bold-Italic;
-  src: url('../fonts/Arvo/Arvo-BoldItalic.ttf'); 
-}
-
 *, *:before, *:after {
 	margin: 0px; 
 	padding: 0px; 
@@ -18,36 +8,307 @@
 
 html,
 body {
-  background-color: #022536;
-}
-
-.logo-m {
-  font-family: Arvo-Bold-Italic;  
-}
-
-.logo {
-  font-family: Arvo-Italic;  
-}
-
-.FlexContainer {
-	position: fixed;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  background-color: var(--white);
+  height: 100%;
   width: 100%;
-  height: 100vh;
-  overflow: auto;
-  flex-direction: row;
-	font-size: 7rem;
 }
 
-.FlexContainer div {
-	color: #fff;
+.link {
+  text-decoration: none;
+  color: inherit;
 }
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* COLOURS */
+
+:root {
+  --white: #FFFFFF;
+  --navy: #022536;
+  --grey: #E7EDEF;
+}
+
+
+/* TYPOGRAPHY */
+
+.font-featuredGreat-lg, .font-featuredGreat-sm {
+  font-family: 'Arvo', serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.font-featuredGreat-lg {
+  font-size: 32px;
+}
+.font-featuredGreat-sm {
+  font-size: 16px;
+}
+
+
+.font-featuredRegular-lg, .font-featuredRegular-sm {
+  font-family: 'Arvo', serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.font-featuredRegular-lg {
+  font-size: 32px;
+}
+.font-featuredRegular-sm {
+  font-size: 16px;
+}
+
+
+.font-featuredGreat-Italic-lg, .font-featuredGreat-Italic-sm {
+  font-family: 'Arvo', serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+}
+  .font-featuredGreat-Italic-lg {
+    font-size: 32px;
+  }
+  .font-featuredGreat-Italic-sm {
+    font-size: 16px;
+  }
+
+
+.font-featuredRegular-Italic-lg, .font-featuredRegular-Italic-sm {
+  font-family: 'Arvo', serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.font-featuredRegular-Italic-lg {
+    font-size: 32px;
+  }
+  .font-featuredRegular-Italic-sm {
+    font-size: 16px;
+  }
+
+
+.font-display-lg, .font-display-md, .font-display-sm, .font-display-xs {
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+  .font-display-lg {
+    font-size: 56px;
+  }
+  .font-display-md {
+    font-size: 40px;
+  }
+  .font-display-sm {
+    font-size: 32px;
+  }
+  .font-display-xs {
+    font-size: 24px;
+  }
+
+.font-headline-xl, .font-headline-lg, .font-headline-md, .font-headline-sm, .font-headline-xs, .font-headline-xxs {
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+  .font-headline-xl {
+    font-size: 24px;
+  }
+  .font-headline-lg {
+    font-size: 20px;
+  }
+  .font-headline-md {
+    font-size: 16px;
+  }
+  .font-headline-sm {
+    font-size: 14px;
+  }
+  .font-headline-xs {
+    font-size: 12px;
+  }
+  .font-headline-xxs {
+    font-size: 10px;
+}
+
+.font-title-xxl, .font-title-xl, .font-title-lg, .font-title-md, .font-title-sm, .font-title-xs {
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+  .font-title-xxl {
+    font-size: 40px;
+  }
+  .font-title-xl {
+    font-size: 32px;
+  }
+  .font-title-lg {
+    font-size: 24px;
+  }
+  .font-title-md {
+    font-size: 16px;
+  }
+  .font-title-sm {
+    font-size: 14px;
+  }
+  .font-title-xs {
+    font-size: 12px;
+}
+
+.font-body-lg, .font-body-md, .font-body-sm {
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+  .font-body-lg {
+    font-size: 16px;
+  }
+  .font-body-md {
+    font-size: 14px;
+  }
+  .font-body-sm {
+    font-size: 12px;
+  }
+
+.site-container {
+  //background: yellow;
+  height: 100vh;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: stretch; 
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    gap: 16px;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .flex-container > div {
+    background: white;
+  }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  height: 100%;
+  align-items: center;
+}
+
+.hero > div {
+  width: 50%;
+}
+
+.text {
+  justify-content: start;
+}
+
+.triangles {
+  justify-content: end;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    /* flex-flow: row wrap; */ 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 24px;
+    padding-bottom: 80px;
+  }
+
+.feature {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    /* flex-flow: row nowrap; */ 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 16px;
+    max-width: 256px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+}
+
+.footer > div {
+  width: 50%;
+  align-items: center;
+  border-top: 1px solid var(--grey);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  gap: 4px;
+  justify-content: start;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  gap: 40px;
+  justify-content: end;
+}
+
+
+/* ATHLETE TRIANGLES */
+
+.container-athletes {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+ justify-content: center;
+}
+
+.athletes {
+  flex-shrink: 1;
+  height: auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+.athletes path {
+  pointer-events: none;
+}
+
+.icon {
+  padding: 8px;
+  background: var(--grey);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+/* RESPONSIVENESS */
 
 @media only screen and (max-width: 414px) {
 .FlexContainer {
-  font-size: 4rem;
+  font-size: 3rem;
+}
 }
