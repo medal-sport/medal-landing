@@ -9,6 +9,7 @@
 html,
 body {
   background-color: var(--white);
+  color: var(--navy);
   height: 100%;
   width: 100%;
 }
@@ -175,7 +176,6 @@ body {
   }
 
 .site-container {
-  //background: yellow;
   height: 100vh;
   padding-right: 40px;
   padding-left: 40px;
@@ -186,20 +186,17 @@ body {
     align-items: stretch; 
     flex-direction: column; 
     flex-wrap: nowrap; 
-    gap: 16px;
     height: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
   }
   .flex-container > div {
-    background: white;
+    padding: 32px;
   }
 
 .header {
   display: flex;
   flex-direction: row;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .hero {
@@ -208,14 +205,55 @@ body {
   flex-wrap: wrap; 
   height: 100%;
   align-items: center;
+  justify-content: center;
+  padding: 0px!important;
 }
 
 .hero > div {
   width: 50%;
+  min-width: 650px;
 }
 
 .text {
   justify-content: start;
+  padding-bottom: 80px;
+}
+
+.words-container {
+  font-size: 88px;
+  background: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.words-container > div:nth-child(1),
+.words-container > div:nth-child(3) {
+  padding: 0 32px 0 32px;
+}
+
+.words-container > div:nth-child(2) a {
+  color: var(--navy)!important;
+}
+  
+.typewrite {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: text;
+  margin-right: -24px;
+  margin-left: -8px;
+}
+
+.typewrite > .wrap { 
+  /*border-right: 2px solid grey !important; -- Typer Line */
+  padding: 0 50px;
+  background: var(--grey);
+  border-radius: 1000px;
+}
+
+.tagline {
+  padding: 32px;
 }
 
 .triangles {
@@ -224,13 +262,14 @@ body {
 
 .feature-container {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-between; 
     align-items: center; 
     /* flex-flow: row wrap; */ 
     flex-direction: row; 
     flex-wrap: wrap; 
     gap: 24px;
-    padding-bottom: 80px;
+    padding-top: 0px !important;
+    padding-bottom: 64px !important;
   }
 
 .feature {
@@ -247,15 +286,15 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0px 32px !important;
 }
 
 .footer > div {
   width: 50%;
   align-items: center;
   border-top: 1px solid var(--grey);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 48px 0 48px;
 }
 
 .left {
@@ -307,8 +346,122 @@ body {
 
 /* RESPONSIVENESS */
 
-@media only screen and (max-width: 414px) {
-.FlexContainer {
-  font-size: 3rem;
+@media only screen and (max-width: 1380px) {
+
+  .site-container {
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .flex-container {
+    height: auto;
+  }
+
+  .header {
+    align-self: center;
+  }
+
+  .font-featuredGreat-Italic-lg, .font-featuredRegular-Italic-lg {
+    font-size: 24px !important;
+  }
+
+  .font-headline-xl {
+    font-size: 24px !important;
+  }
+
+  .hero > div {
+    width: 100%;
+    text-align: center;
+    min-width: 200px !important;
+  }
+
+  .text {
+    padding-bottom: 0px;
+  }
+
+  .words-container {
+    font-size: 88px;
+  }
+  
+  .feature-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    margin: 0 auto;
+    padding-top: 64px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .feature {
+    max-width: 300px;
+  }
+
 }
+
+@media only screen and (max-width: 1000px) {
+
+  .words-container {
+    font-size: 64px;
+  }
+
+  .font-headline-xl {
+    font-size: 16px !important;
+  }
+  
+  .feature-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feature {
+    max-width: none;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    border-top: 1px solid var(--grey);
+  }
+  
+
+  .footer > div {
+    width: 100%;
+    align-items: center;
+    border: none;
+  }
+
+  .left, .right {
+    justify-content: center;
+  }
+
+  .right {
+    flex-wrap: wrap;
+    width: 200px !important;
+    padding-bottom: 0px !important;
+  }
+
+}
+
+@media only screen and (max-width: 414px) {
+
+  .site-container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .words-container {
+    font-size: 48px;
+  }
+
+  .typewrite {
+    margin-right: -12px;
+    margin-left: 0;
+  }
+
+  .typewrite > .wrap {
+    padding: 0 24px;
+  }
+
 }
