@@ -397,6 +397,11 @@ body {
 .lang_menu > div a.active {
   border: 1px var(--navy) solid;
 }
+.lang_menu > div a.disabled {
+  opacity: .2;
+  //cursor: not-allowed;
+  pointer-events: none;
+}
 
 .lang_menu > div a:hover{
   background: var(--grey);
