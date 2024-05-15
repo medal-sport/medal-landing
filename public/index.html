@@ -10,14 +10,47 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/cb0acf41de.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
+    <div class="header">
+      <div class="header__left"><strong>m</strong>edal</div>
+      <!-- <div class="header__right">
+      Sports social network
+      </div> -->
+      <div class="header__right">
+        <div>
+          <a
+            class="link"
+            href="https://linkedin.com/company/medal-network/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </div>
+        <div>
+          <a class="link" href="https://x.com/medal_official" target="_blank"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer__left">Sports social network</div>
+      <div class="footer__right">
+        © 2024 Medal Sport
+        <!-- <a class="link" href="mailto:lademedal@gmail.com">lademedal@gmail.com</a> -->
+      </div>
+    </div>
+
     <div class="wrapper">
       <!-- SLIDE 1 -->
       <div class="card card--1">
         <div class="card__header">
-
           <div class="card__logo card__will-animate">
             <strong>m</strong>edal
           </div>
@@ -27,7 +60,9 @@
         </div>
 
         <div class="card__body card__img--1">
-          <span class="card__subtitle card__will-animate">rock climbing</span>
+          <span class="card__subtitle card__will-animate"
+            ><i class="fa-solid fa-basketball"></i>rock climbing</span
+          >
         </div>
 
         <div class="card__image card__will-animate">
@@ -36,14 +71,12 @@
             alt="screen"
             class=""
           />-->
-          </div>
-
+        </div>
       </div>
 
       <!-- SLIDE 2 -->
       <div class="card card--2">
         <div class="card__header">
-
           <div class="card__logo card__will-animate">
             <strong>m</strong>edal
           </div>
@@ -53,7 +86,9 @@
         </div>
 
         <div class="card__body card__img--2">
-          <span class="card__subtitle card__will-animate">rock climbing</span>
+          <span class="card__subtitle card__will-animate"
+            ><i class="fa-solid fa-basketball"></i>rock climbing</span
+          >
         </div>
 
         <div class="card__image card__will-animate">
@@ -62,13 +97,11 @@
             alt="screen"
             class=""
           />-->
-          </div>
-
+        </div>
       </div>
       <!-- SLIDE 3 -->
       <div class="card card--3">
         <div class="card__header">
-
           <div class="card__logo card__will-animate">
             <strong>m</strong>edal
           </div>
@@ -78,7 +111,9 @@
         </div>
 
         <div class="card__body card__img--3">
-          <span class="card__subtitle card__will-animate">rock climbing</span>
+          <span class="card__subtitle card__will-animate"
+            ><i class="fa-solid fa-basketball"></i>rock climbing</span
+          >
         </div>
 
         <div class="card__image card__will-animate">
@@ -87,14 +122,12 @@
             alt="screen"
             class=""
           />-->
-          </div>
-
+        </div>
       </div>
 
       <!-- SLIDE 4 -->
-     <div class="card card--4">
+      <div class="card card--4">
         <div class="card__header">
-
           <div class="card__logo card__will-animate">
             <strong>m</strong>edal
           </div>
@@ -104,7 +137,9 @@
         </div>
 
         <div class="card__body card__img--4">
-          <span class="card__subtitle card__will-animate">rock climbing</span>
+          <span class="card__subtitle card__will-animate"
+            ><i class="fa-solid fa-basketball"></i>rock climbing</span
+          >
         </div>
 
         <div class="card__image card__will-animate">
@@ -113,10 +148,9 @@
             alt="screen"
             class=""
           />-->
-          </div>
-
+        </div>
       </div>
-
+    </div>
     <!-- /wrapper -->
 
     <!-- bullets -->
@@ -133,6 +167,8 @@
         "use strict";
 
         var BODY_BACKGROUNDS = ["#1C2229", "#FDF06F", "#1C2229", "#FDF06F"];
+        var BODY_TEXT = ["#FDF06F", "#1C2229", "#FDF06F", "#1C2229"];
+        var BULLETS = ["#FAFAFA", "#1C2229", "#FAFAFA", "#1C2229"];
 
         function Slider() {
           this.cards = document.querySelectorAll(".card");
@@ -178,6 +214,26 @@
 
           var bodyEl = document.querySelector("body");
           bodyEl.style.backgroundColor = BODY_BACKGROUNDS[this.currentIndex];
+
+          var bodyElText = document.querySelector("body");
+          bodyElText.style.color = BODY_TEXT[this.currentIndex];
+
+          var bullets1 = document.querySelector(
+            ".cards-placeholder > div:nth-child(1)"
+          );
+          bullets1.style.backgroundColor = BULLETS[this.currentIndex];
+          var bullets2 = document.querySelector(
+            ".cards-placeholder > div:nth-child(2)"
+          );
+          bullets2.style.backgroundColor = BULLETS[this.currentIndex];
+          var bullets3 = document.querySelector(
+            ".cards-placeholder > div:nth-child(3)"
+          );
+          bullets3.style.backgroundColor = BULLETS[this.currentIndex];
+          var bullets4 = document.querySelector(
+            ".cards-placeholder > div:nth-child(4)"
+          );
+          bullets4.style.backgroundColor = BULLETS[this.currentIndex];
         };
 
         // mousedown event
@@ -203,7 +259,8 @@
           var direction = diff > 0 ? "left" : "right";
           this.startX = 0;
 
-          if (Math.abs(diff) > this.windowWidth / 8) { // <-- this value sets lenght of the drag to trigger next slide
+          if (Math.abs(diff) > this.windowWidth / 8) {
+            // <-- this value sets length of the drag to trigger next slide
             if (direction === "left") {
               this.slideLeft();
             } else if (direction === "right") {
@@ -375,6 +432,52 @@
         // create slider
         var slider = new Slider();
       })();
+    </script>
+
+    <!-- Tilt card on Hover -->
+
+    <script>
+      const cardBody1 = document.querySelector(".card__img--1");
+      const cardBody2 = document.querySelector(".card__img--2");
+      const cardBody3 = document.querySelector(".card__img--3");
+      const cardBody4 = document.querySelector(".card__img--4");
+
+      const motionMatchMedia = window.matchMedia("(prefers-reduced-motion)");
+      const THRESHOLD = 5;
+
+      function handleHover(e) {
+        const { clientX, clientY, currentTarget } = e;
+        const { clientWidth, clientHeight, offsetLeft, offsetTop } =
+          currentTarget;
+
+        const horizontal = (clientX - offsetLeft) / clientWidth;
+        const vertical = (clientY - offsetTop) / clientHeight;
+        const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+        const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+
+        cardBody1.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+        cardBody2.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+        cardBody3.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+        cardBody4.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+      }
+
+      function resetStyles(e) {
+        cardBody1.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+        cardBody2.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+        cardBody3.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+        cardBody4.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+      }
+
+      if (!motionMatchMedia.matches) {
+        cardBody1.addEventListener("mousemove", handleHover);
+        cardBody1.addEventListener("mouseleave", resetStyles);
+        cardBody2.addEventListener("mousemove", handleHover);
+        cardBody2.addEventListener("mouseleave", resetStyles);
+        cardBody3.addEventListener("mousemove", handleHover);
+        cardBody3.addEventListener("mouseleave", resetStyles);
+        cardBody4.addEventListener("mousemove", handleHover);
+        cardBody4.addEventListener("mouseleave", resetStyles);
+      }
     </script>
 
     <!-- Firebase Config -->
