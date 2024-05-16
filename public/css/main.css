@@ -170,11 +170,12 @@ body {
   flex-direction: column;
   width: min-content;
   height: 56%;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 88px;
 }
 
 .card__logo {
-  visibility: hidden;
+  display: none;
   font-family: "Arvo", san-serif;
   font-style: italic;
   font-weight: 400;
@@ -253,17 +254,20 @@ body {
 }
 
 .card__image {
-  width: 220px;
-  height: 440px;
+  width: 240px;
+  height: 491px;
   z-index: 2;
   border-radius: 32px;
-  border: 16px solid var(--night1);
+  border: 12px solid var(--night1);
   box-shadow: 8px 20px 80px rgba(0, 0, 0, 0.2);
 
-  /* background: var(--night4); */
-  background: rgba(0,0,0,.5);
-  backdrop-filter: blur(24px);
+  background-color: rgba(176,124,113,.6);
+  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(24px);
+  background-image: url("../images/Profile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
 
   user-select: none;
   -moz-user-select: none;
@@ -362,4 +366,8 @@ body {
     animation-timing-function: step-end;
     z-index: -1;
   }
+}
+
+.typewrite {
+  pointer-events: none;
 }
