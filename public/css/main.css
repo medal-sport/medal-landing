@@ -105,6 +105,14 @@ body {
   font-size: 1.25rem;
   font-weight: 800;
   text-align: left;
+  max-width: 480px;
+  padding-bottom: 32px;
+}
+
+.claim-2 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 4px;
 }
 
 .footer__right {
@@ -410,9 +418,12 @@ body {
     position: relative;
     padding-bottom: 64px;
     flex-direction: column;
-    text-align: center;
     gap: 16px;
     height: auto;
+  }
+
+  .footer__left {
+  text-align: center;
   }
 
   .wrapper {
