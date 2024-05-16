@@ -260,7 +260,8 @@ body {
   background-color: rgba(176,124,113,.6);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(24px);
-  background-image: url("../images/Profile.png");
+  background-image: url("../images/profile_zac.gif");
+  backround: url("../images/profile_zac.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
