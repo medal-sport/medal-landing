@@ -293,11 +293,11 @@
           diff *= -1;
 
           // don't let drag way from the center more than half of window
-          if (Math.abs(diff) > this.windowWidth / 2) {
+          if (Math.abs(diff) > this.windowWidth / 40) {
             if (diff > 0) {
-              diff = this.windowWidth / 2;
+              diff = this.windowWidth / 40;
             } else {
-              diff = -this.windowWidth / 2;
+              diff = -this.windowWidth / 40;
             }
           }
 
